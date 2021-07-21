@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyễn Hồng Vinh</title>
+    <style>
+        *{
+            box-sizing:  border-box;
+        }
+        #main {
+            margin: 0 auto;
+        }
+        .flex{
+            display: flex;
+        }
+        .image__top{
+            position: relative;
+            width: 100%;
+            height: 40%;
+            z-index: -1;
+        }
+        .image__bottom{
+            position: relative;
+            width: 100%;
+            height: 60%;
+            z-index: -1;
+        }
+        .image__top img{
+            width: 100%;
+            height: 100%;
+        }
+        .image__bottom img {
+            width: 100%;
+            height: 60vh;
+        }
+        .introduce{
+            width: 50vw;
+            position: absolute;
+            z-index: 1;
+            background-color: black;
+            color: white;
+            top: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 20%;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .introduce h3, h1{
+            text-align: center;
+            margin: 0;
+
+        }
+        .introduce h3{
+            margin-top: 1%;
+            font-size: 2vw;
+        }
+        .introduce h1{
+            font-size: 3vw;
+            margin-bottom: 10px;
+            margin-bottom: 5px;
+        }
+        .info-main{
+            position: absolute;
+            top: 16%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+        .info{
+            /* position: absolute; */
+            /* z-index: 1; */
+            width: 80vw;
+            /* left: 50%;
+            top: 16%;
+            transform: translateX(-50%); */
+            background-color: white;
+            align-items: center;
+            padding: 10px;
+        }
+        .title{
+            position: absolute;
+            top: 17%;
+            padding: 2px;
+            background-color: #07cb79;
+            color: white;
+            padding: 1px 3px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .titleIcon{
+            top: 25%;
+            transform: translateX(25%);
+            position: absolute;
+            border-top: 2.5vw solid #07cb79;
+            border-right: 8px solid transparent;
+            border-left: 0px solid transparent;
+        }
+        .info__image{
+            width: 40%;
+            height: 90%;
+        }
+        .info__image img {
+            width: 100%;
+        }
+        .info__data{
+            margin-left: 20px;
+        }
+        .title{
+            font-size: 3vw;
+        }
+        .name{
+            font-size: 3vw;
+            position: relative;
+        }
+        p.name::after{
+            content: "";
+            width: 90%;
+            height: 1.5px;
+            background-color: black;
+            position: absolute;
+            top: 140%;
+            left: 0;
+            z-index: 3;
+        }
+        .infomation{
+            font-size: 1.5vw;
+            text-align: left;
+        }
+        .infomation th{
+            text-transform: uppercase;
+        }
+        .said{
+            position: absolute;
+            font-size: 2vw;
+            text-align: center;
+            color: white;
+            background-color: #07cb79;
+            width: 100%;
+        }
+        .links{
+            width: 100%;
+            position: absolute;
+            top: 120%;
+            justify-content: center;
+        }
+        .link-item{
+            margin: 5% 0;
+        }
+        .item-icon{
+            width: 10%;
+            border-radius: 50%;
+            margin-right: 5%;
+            margin-left: 7%;
+            align-items: center;
+            display: flex;
+            border-radius: 50%;
+            box-shadow: 0 0 12px 1vw #b4a7a7, 0 0 0px 2vw white;
+        }
+        .item-icon img{
+            width: 100%;
+        }
+        .item-content{
+            width: 70%;
+            justify-content: center;
+            align-items: center;
+            background-color: blue;
+            font-size: 4vw;
+            border-radius: 50px;
+            box-shadow: 0 0 12px 1vw #b4a7a7, 0 0 0px 2vw white;
+            color: white;
+            font-family: emoji;
+        }
+        .item-content p {
+            margin: 0;
+        }
+        .bgr-fb{
+            background-image: linear-gradient(to right, #000428, #004e92);
+        }
+        .bgr-zl{
+            background-image: linear-gradient(to right, #2980b9, #6dd5fa);
+        }
+        .bgr-ins{
+            background-image: linear-gradient(to top right, #feb153, #f62b38, #413fd9);
+        }
+        .bgr-tw{
+            background-image: linear-gradient(to right, #00acf0, #1ba4d3);
+        }
+        .bgr-tik{
+            background-color: black;
+        }
+        .bgr-phone{
+            background-image: linear-gradient(to right, #14d10c, #9efb8b, #14d10c);
+        }
+        .bgr-email{
+            background-image: linear-gradient(to right, #833ab4, #fd1d1d , #fcb045);
+        }
+        .bgr-mes{
+            background-image: linear-gradient(to right, #3f5efb , #fc466b);
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div class="image__top">
+            <img src="Image/bgr2.jpg" alt="background">
+        </div>
+        <div class="image__bottom">
+            <img src="Image/bgr1.jpg" alt="background">
+        </div>
+        <div class="introduce">
+            <h3>WELCOME TO</h3>
+            <h3>MY</h3>
+            <h1>PERSONAL INFORMATION</h1>
+        </div>
+
+        <div class="info-main">
+            <div class="info flex">
+                <div class="info__image">
+                    <img src="Image/a58a165b4308b456ed19.jpg" alt="avatar">
+                </div>
+                <div class="info__data">
+                    <div class="title">HELLO</div>
+                    <div class="titleIcon"></div>
+                    <p class="name">I'm <strong>Nguyen Hong Vinh</strong> </p>
+                    <table class="infomation">
+                        <tr>
+                            <th>Age:</th>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <th>Address:</th>
+                            <td>Binh Thuan,Tay Son,Binh Dinh</td>
+                        </tr>
+                        <tr>
+                            <th>E-Mail:</th>
+                            <td>vanbinhthuan306@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <th>Phone:</th>
+                            <td>0398189630</td>
+                        </tr>
+                        <tr>
+                            <th>freelance</th>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="said">
+                <p>"Vì lợi ích mười năm thì phải trồng cây, vì lợi ích trăm năm thì phải trồng người"</p>
+            </div>
+        <div>
+
+        <div class="links">
+            <div class="link-item">
+                <a class="flex" href="https://www.facebook.com/hong.vinh.545" target="_blank">
+                    <div class="item-icon">
+                        <img src="Image/logo/2953643177496cc51ba5995be961ad2a.gif" alt="logo">
+                    </div>
+                    <div class="item-content flex bgr-fb">
+                        <p>Facebook</p>
+                    </div>
+                </a>
+            </div>
+            <div class="link-item">
+                <a class=" flex" href="https://www.instagram.com/hongvinh4/" target="_blank">
+                    <div class="item-icon">
+                        <img src="Image/logo/632f181a195d19f2dfa12aff8c45b72b.gif" alt="logo">
+                    </div>
+                    <div class="item-content flex bgr-ins">
+                        <p>Instagram</p>
+                    </div>
+                </a>
+            </div>
+            <div class="link-item">
+                <a class="flex" href="https://twitter.com/NguyenHongVin18" target="_blank">
+                    <div class="item-icon">
+                        <img src="Image/logo/8d1da069fb8119f8760fa2350d294738.gif" alt="logo">
+                    </div>
+                    <div class="item-content flex bgr-tw">
+                        <p>Twitter</p>
+                    </div>
+                </a>
+            </div>
+            <div class="link-item">
+                <a class="flex" href="https://www.tiktok.com/@honvin4?lang=vi-VN" target="_blank">
+                    <div class="item-icon">
+                        <img style="border-radius: 50px;" src="Image/logo/giphy (1).gif" alt="logo">
+                    </div>
+                    <div class="item-content flex bgr-tik">
+                        <p>TikTok</p>
+                    </div>
+                </a>
+            </div>
+            <div class="link-item">
+                <a class="flex" href="https://zalo.me/0398189630" target="_blank">
+                    <div class="item-icon">
+                        <img style="border-radius: 50px;" src="Image/logo/zalo-1-logo-svg-vector.svg" alt="logo">
+                    </div>
+                    <div class="item-content flex bgr-zl">
+                        <p>Zalo</p>
+                    </div>
+                </a>
+            </div>  
+            <div class="link-item">
+                <a class="flex" href="tel:040081276902" target="_blank">
+                    <div class="item-icon">
+                        <img style="border-radius: 50px;" src="Image/logo/images (2).png" alt="logo">
+                    </div>
+                    <div class="item-content flex bgr-phone">
+                        <p>Số điện thoại</p>
+                    </div>
+                </a>
+            </div> 
+            <div class="link-item">
+                <a class="flex" href="mailto:vanbinhthuan306@gmail.com" target="_blank">
+                    <div class="item-icon">
+                        <img style="border-radius: 50px;" src="Image/logo/images (4).png" alt="logo">
+                    </div>
+                    <div class="item-content flex bgr-email">
+                        <p>E-Mail</p>
+                    </div>
+                </a>
+            </div>  
+            <div class="link-item">
+                <a class="flex" href="https://www.messenger.com/t/hong.vinh.545" target="_blank">
+                    <div class="item-icon">
+                        <img style="border-radius: 50px;" src="Image/logo/54ec6a70676e607c103c6c9a2e8a20bd.gif" alt="logo">
+                    </div>
+                    <div class="item-content flex bgr-mes">
+                        <p>Messenger</p>
+                    </div>
+                </a>
+            </div>  
+            
+    </div>
+
+</body>
+</html>
